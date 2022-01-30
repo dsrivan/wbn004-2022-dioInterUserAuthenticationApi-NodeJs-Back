@@ -5,9 +5,12 @@
 - Typescript
 - Express
 - PostGresql
+- JWT (jsonwebtoken)
 
 ### Ferramentas externas
 
 - [ElephantSQL]
+- [Postman]
 
 [elephantsql]: https://www.elephantsql.com/
+[postman]: https://www.postman.com/
