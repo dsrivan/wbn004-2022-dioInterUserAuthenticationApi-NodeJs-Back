@@ -1,0 +1,25 @@
+{
+  "name": "ms-authentication",
+  "version": "1.0.0",
+  "description": "Microsservico criado durante a live code na Dio",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsrivan/wbn004-2022-dioInterUserAuthenticationApi-NodeJs-Back.git"
+  },
+  "author": "Ivan dsr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsrivan/wbn004-2022-dioInterUserAuthenticationApi-NodeJs-Back/issues"
+  },
+  "homepage": "https://github.com/dsrivan/wbn004-2022-dioInterUserAuthenticationApi-NodeJs-Back#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "typescript": "^4.5.5"
+  }
+}
