@@ -8,6 +8,7 @@ const objQueries = {
   insert: `INSERT INTO application_user (username, password) VALUES ($1, crypt($2, 'my_salt')) RETURNING uuid`,
   update: `UPDATE application_user SET username = $1, password = crypt($2, 'my_salt') WHERE uuid = $3`,
   remove: `DELETE FROM application_user WHERE uuid = $1`,
+  findByUsernameAndPassword: `SELECT uuid, username FROM application_user WHERE username = $1 AND password = crypt($2, 'my_salt')`,
 };
 
 class UserRepository {
@@ -29,6 +30,26 @@ class UserRepository {
       return user;
     } catch (error) {
       throw new DatabaseError("Erro na consulta por ID", error);
+    }
+  }
+
+  async findByUsernameAndPassword(
+    username: string,
+    password: string
+  ): Promise<User | null> {
+    try {
+      const query = objQueries.findByUsernameAndPassword;
+
+      const values = [username, password];
+
+      const { rows } = await db.query<User>(query, values);
+      const [user] = rows;
+      return user || null;
+    } catch (error) {
+      throw new DatabaseError(
+        "Erro na consulta por username e password",
+        error
+      );
     }
   }
 
