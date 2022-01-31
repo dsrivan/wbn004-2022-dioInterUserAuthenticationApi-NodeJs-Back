@@ -11,6 +11,7 @@
 
 - [ElephantSQL]
 - [Postman]
+- [JWT.IO]
 
 ### Composição do projeto
 
@@ -30,3 +31,4 @@ _Endpoints_ de autenticação
 
 [elephantsql]: https://www.elephantsql.com/
 [postman]: https://www.postman.com/
+[jwt.io]: https://jwt.io/
