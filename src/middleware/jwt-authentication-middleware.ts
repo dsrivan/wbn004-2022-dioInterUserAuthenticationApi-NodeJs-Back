@@ -14,8 +14,6 @@ async function jwtAuthenticationMiddleware(
       throw new ForbiddenError("Credenciais não informadas.");
     }
 
-    // exemplo do código de 'Bearer Token': Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjQzNTgzNzk0LCJzdWIiOiJjZDZlOTdjYS0xNWMyLTQyNGItYjdkNS0xMTliNGYyYzQzNGEifQ.H-AioR8SWGdz8PLZwo4unzAfqJURQtjsvMDwFaHNvzc
-
     const [authenticationType, token] = authorizationHeader.split(" ");
 
     if (authenticationType !== "Bearer" || !token) {

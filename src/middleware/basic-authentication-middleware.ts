@@ -13,8 +13,6 @@ async function basicAuthenticationMiddleware(
       throw new ForbiddenError("Credenciais não informadas.");
     }
 
-    // exemplo do código de 'Basic Auth': Basic YWRtaW46YWRtaW4
-
     const [authenticationType, token] = authorizationHeader.split(" ");
 
     if (authenticationType !== "Basic" || !token) {

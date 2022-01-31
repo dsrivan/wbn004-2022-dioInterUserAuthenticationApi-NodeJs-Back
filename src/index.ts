@@ -19,5 +19,6 @@ app.use(authorizationRoute);
 app.use(errorHandler);
 
 // Inicialização do servidor
-const PORT = 3000;
-app.listen(PORT, () => console.log(`App rodando na porta ${PORT}`));
+app.listen(process.env.PORT, () =>
+  console.log(`App rodando na porta ${process.env.PORT}`)
+);
