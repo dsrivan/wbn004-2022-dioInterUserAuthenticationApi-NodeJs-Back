@@ -15,8 +15,7 @@
 
 ### Composição do projeto
 
-_Endpoints_ do projeto:
-Usuários
+_Endpoints_ de usuários
 
 - GET /users
 - GET /users/:uuid
