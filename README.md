@@ -5,7 +5,7 @@
 - Typescript
 - Express
 - PostGresql
-- JWT (jsonwebtoken)
+- JWT
 
 ### Ferramentas externas
 
